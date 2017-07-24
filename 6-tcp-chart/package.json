@@ -1,5 +1,5 @@
 {
   "name": "tcp-chat",
   "version": "0.0.1",
-  "description": "our first tcp server"
+  "description": "聊天程序"
 }
