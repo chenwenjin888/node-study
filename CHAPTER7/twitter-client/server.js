@@ -1,13 +1,17 @@
+
 var qs = require('querystring');
+
 require('http').createServer(function (req, res) {
     var body = '';
+
     req.on('data', function (chunk) {
         body += chunk;
     });
+
     req.on('end', function () {
-        "use strict";
-        res.writeHead(200, { 'Content-Type': 'text/html; charset=utf-8' });
-        res.end('<p>你的姓名是: ' + qs.parse(body).name + '</p>');
-        console.log(qs.parse(body));
+        res.writeHead(200);
+        res.end('Done');
+
+        console.log('\n  获取名称： \033[90m' + qs.parse(body).name + '\033[39m');
     });
 }).listen(3001);
