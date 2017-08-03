@@ -1,0 +1,12 @@
+{
+  "name": "express",
+  "version": "1.0.0",
+  "description": "豆瓣书籍搜索",
+  "devDependencies": {},
+  "dependencies": {
+    "ejs": "^2.5.7",
+    "express": "^4.15.3",
+    "morgan": "^1.8.2",
+    "superagent": "^3.5.2"
+  }
+}

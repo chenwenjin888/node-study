@@ -1,0 +1,11 @@
+<h1>搜索书籍结果： <%= search %></h1>
+
+<% if (results.length) { %>
+<ul>
+    <% for (var i = 0; i < results.length; i++) { %>
+    <li><%= results[i].id %>- <%= results[i].title %></li>
+    <% } %>
+</ul>
+<% } else { %>
+<p>No results</p>
+<% } %>
