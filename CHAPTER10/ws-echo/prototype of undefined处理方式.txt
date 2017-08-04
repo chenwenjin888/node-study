@@ -1,0 +1,15 @@
+用最新版本的webSocket.io(当时最新版：0.2.1)原文例子中会出现Cannot read property 'prototype' of undefined 的异常，处理方式：
+
+按照提示的文件进行修改(多个文件)：
+第一处：
+ //, EventEmitter = process.EventEmitter   // 注释掉
+  , events = require('events') // 新增
+第二处：
+//Server.prototype.__proto__ = EventEmitter.prototype;  // 注释掉
+Server.prototype.__proto__ = Object.create(events.EventEmitter.prototype); // 新增
+
+
+
+
+注：此例子服务启动正常，客户端会出现WebSocket connection to 'ws://localhost:3001/' failed: Connection closed before receiving a handshake response异常
+暂未找到合适的方案， 猜测跟浏览器有关

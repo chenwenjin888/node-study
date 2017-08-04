@@ -1,0 +1,8 @@
+{
+  "name": "ws-echo",
+  "version": "1.0.0",
+  "dependencies": {
+    "express": "^4.15.3",
+    "websocket.io": "^0.2.1"
+  }
+}
