@@ -1,0 +1,9 @@
+
+if (authenticated)
+  p 欢迎回来, #{me.name}
+  a(href="/logout") Logout
+else
+  p 请选择！
+  ul
+    li: a(href="/login") 登陆
+    li: a(href="/signup") 注册

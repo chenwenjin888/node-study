@@ -1,0 +1,16 @@
+if (signupEmail)
+  p 注册成功，请登录.
+
+form(action="/login", method="POST")
+  fieldset
+    legend 登陆
+    p
+      label 邮箱：
+      input(name="user[email]", type="text", value=signupEmail)
+    p
+      label 密码：
+      input(name="user[password]", type="password")
+    p
+      button 登陆
+    p
+      a(href="/") 返回

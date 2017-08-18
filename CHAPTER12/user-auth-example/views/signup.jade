@@ -1,0 +1,17 @@
+
+form(action="/signup", method="POST")
+  fieldset
+    legend 注册
+    p
+      label 用户名：
+      input(name="user[name]", type="text")
+    p
+      label 邮箱：
+      input(name="user[email]", type="text")
+    p
+      label 密码：
+      input(name="user[password]", type="password")
+    p
+      button 提交
+    p
+      a(href="/") 返回
